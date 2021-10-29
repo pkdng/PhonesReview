@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Specification</title>
+  </head>
+  <body>
+    <div class="container mb-4">
+      <!-- navbar -->
+			<nav class="navbar navbar-dark bg-secondary mb-4">
+				<div class="container-fluid">
+					<a href="index.html" class="navbar-brand"><h3>PhoneReview</h3></a>
+				</div>
+			</nav>
+      <h4 id="loading" class="text-center">Loading...</h4>
+
+			<!-- content -->
+			<div id="phone-detail" class="d-none">
+				<div id="card-phone" class="card mb-3 border-0">
+					<!-- <div class="row g-0">
+						<div class="col-md-3 border">
+							<img 
+								src="https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-n11-0.jpg" 
+								class="img-fluid" 
+								alt="img"
+								style="height: 300px;"
+							>
+						</div>
+						<div class="col-md-9">
+							<div class="card-body">
+								<h5 class="card-title">Huwaei</h5>
+								<h4 class="card-title">Enjoy 20e</h4>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								<p class="card-text"><small class="text-muted">Exp. release 2021, November 11</small></p>
+							</div>
+						</div>
+					</div> -->
+				</div>
+				<!-- specification-start -->
+				<div id="specification">
+					<div class="bg-light py-3 px-2 mb-3 b">
+						<h4>Specification</h4>
+					</div>
+					<!-- <table class="table table-bordered p-0">
+						<tbody>
+							<tr>
+								<th>Network</th>
+								<td> -->
+									<!-- <table class="table m-0">
+										<tbody>
+											<tr>
+												<th style="width: 15%;">Technology</th>
+												<td>GSM / CDMA / HSPA / EVDO / LTE / 5G</td>
+											</tr>
+											<tr>
+												<th class="border-0">Technology</th>
+												<td>GSM / CDMA / HSPA / EVDO / LTE / 5G</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>GSM / CDMA / HSPA / EVDO / LTE / 5G</td>
+											</tr>
+											<tr>
+												<th>Technology</th>
+												<td>GSM / CDMA / HSPA / EVDO / LTE / 5G</td>
+											</tr>
+											<tr>
+												<th>Technology</th>
+												<td>GSM / CDMA / HSPA / EVDO / LTE / 5G</td>
+											</tr>
+										</tbody>
+									</table> -->
+								<!-- </td>
+							</tr>
+						</tbody>
+					</table> -->
+				</div>
+				<!-- specification-end -->	
+				<!-- komentar-start -->
+				<div id="komentar" class="mt-3">
+					<div class="bg-light py-3 px-2">
+						<h4>User Opinions and Review</h4>
+					</div>
+					<div class="column">
+						<div
+							class="
+								col-6
+								d-flex
+								gap-2
+								justify-content-center
+								align-items-center"
+						>
+						</div>
+						<div class="col-6 w-100">
+							<ul
+								id="comment-list"
+								class="list-group  overflow-auto"
+								style="height: 220px"
+							>
+								<li
+									class="
+										list-group-item
+										d-flex
+										justify-content-between
+										align-items-center"
+								>
+									<div class="ms-2 me-auto">
+										<div class="fw-bold text-capitalize">Wanda</div>
+										Daya tahan baterai bagus, Performa tinggi
+									</div>
+								</li>
+								<li
+									class="
+										list-group-item
+										d-flex
+										justify-content-between
+										align-items-start"
+								>
+									<div class="ms-2 me-auto">
+										<div class="fw-bold text-capitalize">Tommy</div>
+										Body Awet, ringan dan mudah dibawa
+									</div>
+								</li>
+								<li
+									class="
+										list-group-item
+										d-flex
+										justify-content-between
+										align-items-start"
+								>
+									<div class="ms-2 me-auto">
+										<div class="fw-bold text-capitalize">Stephen S.</div>
+										Tidak sesuai Ekspektasi
+									</div>
+								</li>
+								<li
+									class="
+										list-group-item
+										d-flex
+										justify-content-between
+										align-items-start"
+								>
+									<div class="ms-2 me-auto">
+										<div class="fw-bold text-capitalize">Carol D.</div>
+										Kamera Berkualitas dan body Elegant
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="comment-form-section" class="col-12 d-none">
+							<form id="comment-form">
+								<div class="mb-3">
+									<label for="exampleInputEmail1" class="form-label"
+										>Username</label
+									>
+									<input
+										type="text"
+										class="form-control"
+										id="input-username"
+										aria-describedby="emailHelp"
+									/>
+								</div>
+								<div class="mb-3">
+									<label for="comment" class="form-label">Comments</label>
+									<textarea
+										name="comment"
+										id="input-comment"
+										rows="5"
+										class="form-control"
+									></textarea>
+								</div>
+								<div>
+									<button id="btn-submit" type="submit" class="btn btn-primary">
+										submit
+									</button>
+									<button
+										id="btn-cancel"
+										type="button"
+										class="btn btn-link text-decoration-none"
+									>
+										cancel
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<button
+						id="btn-comment"
+						class="btn btn-primary w-100 text-capitalize">
+						write a review
+					</button>
+				</div>
+				<!-- komentar-end			 -->
+			</div>
+    </div>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		<script type="module" src="phone-specification.js"></script>
+		<script src="RK.js"></script>
+	</body>
+</html>
