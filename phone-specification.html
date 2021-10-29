@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container mb-4">
+      <!-- navbar -->
+			<nav class="navbar navbar-light bg-light mb-4">
+				<div class="container-fluid">
+					<a href="index.html" class="navbar-brand"><h3>PhoneReview</h3></a>
+				</div>
+			</nav>
+      <h4 id="loading" class="text-center">Loading...</h4>
+
+			<!-- content -->
+			<div id="phone-detail" class="d-none">
+				<div class="card mb-3">
+					<div class="row g-0">
+						<!-- gatau gimana ABAIKAN dulu ini masih blm dinamis -->
+						<div class="col-md-3 border">
+							<img 
+								src="https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-n11-0.jpg" 
+								class="img-fluid" 
+								alt="img"
+								style="height: 300px;"
+							>
+						</div>
+						<div class="col-md-9">
+							<div class="card-body">
+								<h5 class="card-title">Huwaei</h5>
+								<h4 class="card-title">Enjoy 20e</h4>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								<p class="card-text"><small class="text-muted">Exp. release 2021, November 11</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- gatau gimana -->
+				<!-- specification-start -->
+				<div id="specification">
+					<div class="bg-light py-3 px-2 mb-3">
+						<h4>Specification</h4>
+					</div>
+					<!-- <table class="table table-bordered p-0">
+						<tbody>
+							<tr>
+								<th>Network</th>
+								<td>
+									<table class="table m-0">
+										<tbody>
+											<tr>
+												<th style="width: 15%;">Technology</th>
+												<td>GSM / CDMA / HSPA / EVDO / LTE / 5G</td>
+											</tr>
+											<tr>
+												<th class="border-0">Technology</th>
+												<td>GSM / CDMA / HSPA / EVDO / LTE / 5G</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>GSM / CDMA / HSPA / EVDO / LTE / 5G</td>
+											</tr>
+											<tr>
+												<th>Technology</th>
+												<td>GSM / CDMA / HSPA / EVDO / LTE / 5G</td>
+											</tr>
+											<tr>
+												<th>Technology</th>
+												<td>GSM / CDMA / HSPA / EVDO / LTE / 5G</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table> -->
+				</div>
+				<!-- specification-end -->				
+			</div>
+    </div>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		<script type="module" src="phone-specification.js"></script>
+	</body>
+</html>
