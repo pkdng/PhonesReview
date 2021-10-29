@@ -1,0 +1,88 @@
+.card-img-overlay2 {
+    padding: 2% 5%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    color: rgb(252, 252, 252);
+}
+
+.card-img-overlay {
+    padding: 40% 5%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+
+.card-img-overlay2 h4 {
+    color: #fff;
+    font-weight: bold;
+}
+
+.card-img-overlay h5 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.con {
+    overflow: hidden;
+}
+
+.con img {
+    width: 100%;
+    transition: 1s ease;
+}
+
+.con:hover {
+    cursor: pointer;
+}
+
+.con:hover img {
+    filter: brightness(65%);
+    transform: scale(1.5);
+}
+
+.con h4 {
+    transition: 1s ease;
+}
+
+.con:hover h4 {
+    font-size: 25px;
+}
+
+.con2 {
+    overflow: hidden;
+}
+
+.con2 img {
+    width: 100%;
+    transition: 1s ease;
+}
+
+.con2:hover {
+    cursor: pointer;
+}
+
+.con2:hover img {
+    filter: brightness(65%);
+    transform: scale(1.5);
+}
+
+.con2 h5 {
+    transition: 1s ease;
+}
+
+.con2:hover h5 {
+    font-size: 22px;
+}
