@@ -58,9 +58,9 @@ export const getPhone = async (phone) => {
     }
 };
 
-export const getPhoneSpecifications = async (phone) => {
+export const getPhoneSpecifications = async (phone_slug) => {
     try{
-        const posts = await fetch(`https://api-mobilespecs.azharimm.site/v2/${phone}`);
+        const posts = await fetch(`https://api-mobilespecs.azharimm.site/v2/${phone_slug}`);
         return posts.json();
     }catch (error) {
         console.log('getPhoneSpecifications',error);
