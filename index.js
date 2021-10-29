@@ -1,6 +1,4 @@
-import { getTopByInterest , getTopByFans , getLatestPhones, getListPhones, getListBrands, getPhoneSpecifications, getPhone} from "./fetch.js"
-
-const submitSearch = document.querySelector('#form-search')
+import { getTopByInterest , getTopByFans , getLatestPhones } from "./fetch.js"
 
 const row = document.querySelector('#row-devices');
 const latestDevice = document.querySelector('#latest-device')
@@ -11,9 +9,9 @@ const tHeadInt = document.createElement('thead');
 const tBodyFans = document.createElement('tbody');
 const tHeadFans = document.createElement('thead');
 
+const elTableInt = document.createElement('table')
+elTableInt.classList.add('table','table-striped','mb-0', 'table-sm')
 const createInterest = (phone, hits, index) => {
-    const elTable = document.createElement('table')
-    elTable.classList.add('table','table-striped','mb-0', 'table-sm')
     const elRow = document.createElement('tr');
     const elPhone = document.createElement('td');
     const elHits = document.createElement('td');
@@ -26,7 +24,7 @@ const createInterest = (phone, hits, index) => {
         elHeadRow.appendChild(elHeadPhone);
         elHeadRow.appendChild(elHeadHits);
         tHeadFans.appendChild(elHeadRow);
-        elTable.appendChild(tHeadFans);
+        elTableInt.appendChild(tHeadFans);
 
         elHeadPhone.innerHTML = "Phone Name"
         elHeadHits.innerHTML = "Hits"
@@ -35,16 +33,17 @@ const createInterest = (phone, hits, index) => {
     elRow.appendChild(elPhone);
     elRow.appendChild(elHits)
     tBodyInt.appendChild(elRow);
-    elTable.appendChild(tBodyInt);
-    topInt.appendChild(elTable)
+    elTableInt.appendChild(tBodyInt);
+    topInt.appendChild(elTableInt)
     
     elPhone.innerHTML = phone
     elHits.innerHTML = hits
 }
 
+const elTableFans = document.createElement('table')
+elTableFans.classList.add('table','table-striped','mb-0', 'table-sm');
 const createFans = (phone, fav, index) => {
-    const elTable = document.createElement('table')
-    elTable.classList.add('table','table-striped','mb-0', 'table-sm');
+    
     const elRow = document.createElement('tr');
     const elPhone = document.createElement('td');
     const elHits = document.createElement('td');
@@ -57,7 +56,7 @@ const createFans = (phone, fav, index) => {
         elHeadRow.appendChild(elHeadPhone);
         elHeadRow.appendChild(elHeadFav);
         tHeadInt.appendChild(elHeadRow);
-        elTable.appendChild(tHeadInt);
+        elTableFans.appendChild(tHeadInt);
 
         elHeadPhone.innerHTML = "Phone Name"
         elHeadFav.innerHTML = "Favorite"
@@ -66,20 +65,18 @@ const createFans = (phone, fav, index) => {
     elRow.appendChild(elPhone);
     elRow.appendChild(elHits)
     tBodyFans.appendChild(elRow);
-    elTable.appendChild(tBodyFans);
-    topFans.appendChild(elTable)
+    elTableFans.appendChild(tBodyFans);
+    topFans.appendChild(elTableFans)
 
     elPhone.innerHTML = phone
     elHits.innerHTML = fav
 }
 
-const createLatestDevices = (name, image, detail) => {
+const createLatestDevices = (name, image, slug) => {
     const elLink = document.createElement('a')
-    elLink.setAttribute('href',detail)
+    elLink.setAttribute('href',`phone-specification.html?value=${slug}`)
     elLink.style.textDecoration ="none"
     elLink.style.color = "black"
-    
-    console.log(detail)
 
     const elCol = document.createElement('div')
     elCol.classList.add('col');
@@ -97,7 +94,6 @@ const createLatestDevices = (name, image, detail) => {
         elCard.style.transform = "none";
         elCard.style.boxShadow = "none";
         elCard.style.color = "black";
-        console.log(detail)
     }
 
     const elImg = document.createElement('img')
@@ -119,28 +115,28 @@ const createLatestDevices = (name, image, detail) => {
 }
 
 // Search by brand
-submitSearch.onsubmit = async (e) => {
-    e.preventDefault();
+// submitSearch.onsubmit = async (e) => {
+//     e.preventDefault();
     
-    const value = submitSearch.firstElementChild.value
-    let slug = null;
-    let brands = await getListBrands();
+//     const value = submitSearch.firstElementChild.value
+//     let slug = null;
+//     let brands = await getListBrands();
 
-    brands.data.forEach(element => {
-        if(element.brand_name.toLowerCase() === value.toLowerCase()){
-            console.log(element.brand_name, element.brand_slug)
-            slug = element.brand_slug
-        }
-    });
+//     brands.data.forEach(element => {
+//         if(element.brand_name.toLowerCase() === value.toLowerCase()){
+//             console.log(element.brand_name, element.brand_slug)
+//             slug = element.brand_slug
+//         }
+//     });
 
-    if(slug !== null){
-        let phone = await getListPhones(slug);
-        console.log(phone);
-        // submitSearch.setAttribute('action',`phone-list.html?brand_slug=${slug}`)
-    }else{
-        console.log("Brand Not Found")
-    }
-}
+//     if(slug !== null){
+//         let phone = await getListPhones(slug);
+//         console.log(phone);
+//         // submitSearch.setAttribute('action',`phone-list.html`)
+//     }else{
+//         console.log("Brand Not Found")
+//     }
+// }
 
 const renderPosts = async () => {
     // Top by Interest
@@ -164,9 +160,10 @@ const renderPosts = async () => {
     let devices = await getLatestPhones()
     //console.log(devices)
     const listDevice = devices.data.phones
+    console.log(listDevice)
     
     listDevice.forEach(element => {
-        createLatestDevices(element.phone_name, element.image, element.detail)
+        createLatestDevices(element.phone_name, element.image, element.slug)
         
     });
 }
