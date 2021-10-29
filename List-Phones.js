@@ -36,7 +36,7 @@ fetch(`https://api-mobilespecs.azharimm.site/v2/brands`).then((data)=>{
                         <div class="main-img"><img src=${values.image} alt="Category"></div>
                         <div class="card-body text-center">
                             <h4 class="card-title">${values.phone_name}</h4>
-                            <p class="text-muted">${values.brand}</p><a class="btn btn-outline-primary btn-sm" href=${values.detail}>View Products</a>
+                            <p class="text-muted">${values.brand}</p><a class="btn btn-outline-primary btn-sm" href="phone-specification.html?value=${values.slug}">View Products</a>
                         </div>
                     </div>
                 </div> `;

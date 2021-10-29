@@ -48,8 +48,6 @@ elBtnComment.addEventListener("click", function(event){
     
   })
 
-
-
   elBtnCancel.addEventListener("click", function(event){
     
     elInputComment.value = "" 
